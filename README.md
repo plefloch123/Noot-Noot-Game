@@ -42,9 +42,10 @@ Follow these simple steps to start your adventure:
 ## 🕹️ Gameplay Preview  
 
 <p align="center">
-  <img src="graphics/README/gameplay.PNG" alt="Noot-Noot Gameplay" width="600" style="border-radius:12px; margin-bottom:10px;">
-  <img src="graphics/README/gameplay2.PNG" alt="Noot-Noot Gameplay 2" width="600" style="border-radius:12px;">
+  <img src="graphics/README/gameplay.PNG" alt="Noot-Noot Gameplay 1" width="45%" style="border-radius:12px; margin-right:10px;">
+  <img src="graphics/README/gameplay2.PNG" alt="Noot-Noot Gameplay 2" width="45%" style="border-radius:12px;">
 </p>
+
 
 Experience the thrill of dodging snowballs and sliding through icy terrain as Noot-Noot tries to survive as long as possible!  
 Collect points, beat your high score, and have fun in this chilly, fast-paced adventure. 🏔️  

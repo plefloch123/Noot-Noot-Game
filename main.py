@@ -525,6 +525,8 @@ def game_level(level):
     mixer.music.load("music/Freeze-Man-Stage-Iceberg-Area-M.mp3")
     mixer.music.play()
 
+    hud_color = white if level in (1, 3) else black
+
     while running:
         # Playing the music of the game
         update_ball_position()
@@ -536,8 +538,7 @@ def game_level(level):
         check_not_same_starting_direction()
         screen.fill((0, 0, 0))
         # Setting the background
-        screen.blit(background, (0, 0))
-        draw_text('Game', font, (255, 255, 255), screen, 20, 20)
+        screen.blit(background, (0, 0)) 
         # Setting the snowball on the screen
         snowball = screen.blit(snowball_Img, (snowball_x, snowball_y))
         # Setting the player on the screen
@@ -551,11 +552,11 @@ def game_level(level):
         if not golden_boost_activated:
             check_collision(gamer.centerx, gamer.centery, snowball.centerx, snowball.centery)
         # Display the score
-        draw_text("Score: " + str(score), other_font_smaller, black, screen, 265, 17)
+        draw_text("Score: " + str(score), other_font_smaller, hud_color, screen, 265, 17)
         # Display the high score
-        draw_text("Highest Score: " + str(high_score), other_font_smaller, black, screen, 18, 17)
+        draw_text("Highest Score: " + str(high_score), other_font_smaller, hud_color, screen, 18, 17)
         # Display previous score
-        draw_text("Previous Score: " + str(previous_score), other_font_smaller, black, screen, 400, 17)
+        draw_text("Previous Score: " + str(previous_score), other_font_smaller, hud_color, screen, 400, 17)
 
         # If the player takes the fire boost, it will take out 1 in speed in the y direction or x randomly
         if fire_boost_available:
@@ -606,11 +607,11 @@ def game_level(level):
                 golden_boost_available = False
 
         if golden_boost_activated is True:
-            display_timer = font.render("Time left: " + str(my_timer), True, black, white)
+            display_timer = font.render("Time left: " + str(my_timer), True, hud_color, white)
             screen.blit(display_timer, (300, 572))
 
         # Display the speed
-        draw_text("Speed: " + str(player_speed - 2), other_font_smaller, black, screen, 18, 572)
+        draw_text("Speed: " + str(player_speed - 2), other_font_smaller, hud_color, screen, 18, 572)
 
         for event in pygame.event.get():
             if event.type == QUIT:
